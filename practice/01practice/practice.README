@@ -1,0 +1,141 @@
+
+practice00.go    forのテスト, int型内容
+practice01.go    forのテスト, float型内容
+practice02.go    string と goルーチンのテスト
+practice03.go    forテスト 
+practice04.go    for rangeテスト
+practice09.go    戻り値にokテスト
+practice10.go    複数戻り値テスト
+practice11.go    bool型比較テスト
+practice13.go    array初期化テスト
+practice16.go    関数の値の返し方。*引数,戻り値
+practice21.go    complex64型のテスト。くるくる回る
+practice22.go    rangeでrune文字を取り出す
+practice26.go    関数外実行文のテスト
+
+
+https://golang.hateblo.jp/entry/2019/10/07/171630#%E4%BB%96%E3%81%AE%E8%A8%80%E8%AA%9E%E3%81%AB%E3%81%82%E3%82%8B%E3%82%88%E3%81%86%E3%81%AA-each-%E9%96%A2%E6%95%B0%E3%82%92%E5%AE%9F%E8%A3%85%E3%81%97%E3%81%A6%E3%81%BF%E3%82%8B
+
+golangの日記
+Go言語(golang)のループ for, for..range, foreach, while
+
+practice05.go    他の言語にあるような each 関数を実装してみる
+
+
+
+https://free-engineer.life/golang-map-for-loops/
+【Go言語】mapのforループの繰り返し順序はランダム
+practice04-1.go  mapの順序
+Go Playground では毎回異なるが、ターミナルから実行すると毎回同じ
+
+
+
+とほほのGo言語入門         https://www.tohoho-web.com/ex/golang.html#interfaces
+
+practice07.go    struct
+practice14.go    slice
+practice15.go    interface
+practice17.go    interfaceでdictもどきを作る
+practice18.go    new
+
+
+
+
+サンプルで学ぶ Go 言語     https://www.spinute.org/go-by-example/
+
+practice06.go    Range
+practice08.go    Structs
+practice12.go    Erros
+practice23.go    Closures
+practice24.go    Variadic Functions
+practice25.go    XML サンプルのstruct　Stringメソッドをテスト
+
+
+元ネタ
+Go by Example     https://gobyexample.com/
+
+
+
+サンプルで学ぶ Go 言語
+
+Go はオープンソースのプログラミング言語であり、シンプルで高速、信頼性の高いソフトウェアを作るために設計された。
+
+サンプルで学ぶ Go 言語は、説明付きのプログラムを使った、ハンズオン形式の Go 言語チュートリアルだ。 最初の例に進んでもよいし、下にある一覧から読みたい例を探してよい。
+
+    Hello World
+    Values
+    Variables
+    Constants
+    For
+    If/Else
+    Switch
+    Arrays
+    Slices
+    Maps
+    Range
+    Functions
+    Multiple Return Values
+    Variadic Functions
+    Closures
+    Recursion
+    Pointers
+    Structs
+    Methods
+    Interfaces
+    Errors
+    Goroutines
+    Channels
+    Channel Buffering
+    Channel Synchronization
+    Channel Directions
+    Select
+    Timeouts
+    Non-Blocking Channel Operations
+    Closing Channels
+    Range over Channels
+    Timers
+    Tickers
+    Worker Pools
+    WaitGroups
+    Rate Limiting
+    Atomic Counters
+    Mutexes
+    Stateful Goroutines
+    Sorting
+    Sorting by Functions
+    Panic
+    Defer
+    Collection Functions
+    String Functions
+    String Formatting
+    Regular Expressions
+    JSON
+    XML
+    Time
+    Epoch
+    Time Formatting / Parsing
+    Random Numbers
+    Number Parsing
+    URL Parsing
+    SHA1 Hashes
+    Base64 Encoding
+    Reading Files
+    Writing Files
+    Line Filters
+    File Paths
+    Directories
+    Temporary Files and Directories
+    Testing
+    Command-Line Arguments
+    Command-Line Flags
+    Command-Line Subcommands
+    Environment Variables
+    HTTP Clients
+    HTTP Servers
+    Context
+    Spawning Processes
+    Exec'ing Processes
+    Signals
+    Exit
+
+翻訳者・ウェブサイト作成者：@spinute | 原作者 @mmcgrana | フィードバック | ソースコード | ライセンス
