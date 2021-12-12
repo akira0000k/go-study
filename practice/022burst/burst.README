@@ -1,0 +1,23 @@
+これは何ですか?
+
+サンプルで学ぶ Go 言語：Rate Limiting    https://www.spinute.org/go-by-example/rate-limiting.html
+
+の説明が要領を得なかったので、自分で考えてみた。
+
+burst02.go が完成型
+
+	go func() {
+		defer wg.Done()
+		defer close(limiter)
+		defer close(bursts)
+		for req := range requests {
+			limiter <- struct{}{}
+			bursts <-req
+		}
+	}()
+
+ここでリクエストキュー (requests chan)から要求を取り出して、ワーカーに(bursts chan)ディスパッチするが、
+その前に (limiter chan)に何かを詰め込む。
+limiter ではこれを定期的に受け取ってレート制限している。
+limiter chanはバッファがあるのでその数(-1) 分のバーストも受け付ける
+
