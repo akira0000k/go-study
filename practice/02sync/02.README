@@ -1,0 +1,42 @@
+逆引きGolang (goroutine)  https://ashitani.jp/golangtips/tips_goroutine.html
+
+goroutineの実行を終了させる 例
+　　最後ギリギリに . を入力すると終了させられない
+　　gyaku01-3.go　チャネル入力の刈り取りをして固まらないようにした
+
+goroutineを(一時)停止する 例
+　　これも最後ギリギリに . を入力すると終了させられない
+　　gyaku02-1.go　　チャネルにバッファーを付けて固まらないようにした
+　　gyaku02-2.go   チャネル入力の刈り取りをして固まらないようにした
+
+実行中のgoroutine一覧を取得する
+　　gyaku03.go
+goroutine間の通信
+   gyaku04.go
+goroutine間の競合
+　　gyaku05.go
+
+
+
+
+サンプルで学ぶ Go 言語      https://www.spinute.org/go-by-example/
+
+
+sync01.go   Goroutines
+sync02.go   Channel Buffering
+sync03.go   Non-Blocking Channel Operations
+sync04.go   Closing Channels
+sync05.go   Range over Channels
+sync06.go   Timers
+sync07.go   Tickers
+sync08.go   Worker sPools
+sync09.go   Wait Groups
+
+sync10.go   ---->022burst
+
+sync11.go   Atomic Counters
+sync12.go   Mutexes
+sync13.go   Stateful Goroutines
+
+sync14.go   (nil channel test)
+sync15.go   (from sync13:close channel broadcast) use flag again=OK
