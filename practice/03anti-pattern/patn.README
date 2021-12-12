@@ -1,0 +1,19 @@
+Hori Blog
+
+Go の channel 処理パターン集　　　　https://hori-ryota.com/blog/golang-channel-pattern/
+
+「Go の長所に goroutine による非同期処理がありますが、どうしても channel の取り回しで黒魔術化しがちです。
+少しでも闇を減らしていきたいので、 channel らへんの取り回しについてパターンをまとめました。
+チートシート的に使えれば嬉しいです。」
+
+
+
+感想
+
+  極力 for v := range ch {
+
+を使えと言うことは納得しました。
+
+patn05.go
+channel close を調べる関数は不可能ぽい。go versionの違いで出来なくなったかもしれない。
+
