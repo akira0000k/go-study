@@ -1,0 +1,20 @@
+Benchmark test
+
+
+    ソース.go を一個だけにして
+
+    go test -bench . -benchmem
+
+
+bench01_test.go
+	go標準のbenchmark機能の使い方    https://qiita.com/marnie_ms4/items/7014563083ca1d824905
+
+	・go界隈では有名な appendで都度allocateすると重いよね~ なコードを例に。testファイルを作成
+
+
+bench02_test.go
+	Hori Blog    Go の channel 処理パターン集    https://hori-ryota.com/blog/golang-channel-pattern/
+	高速に送りまくる
+
+	例えばシンプルな slice 処理に比べるとパフォーマンスがどうしても悪くなるので、高パフォーマンスが必要な箇所ではベンチを取って検証した方がいいです。
+	ちょっと雑ですが、シンプルに slice で入れ出しする場合と channel を経由して入れ出しする場合のベンチを取ってみました。
