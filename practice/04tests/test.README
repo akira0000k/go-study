@@ -1,0 +1,11 @@
+サンプルで学ぶ Go 言語      https://www.spinute.org/go-by-example/
+
+ディレクトリにソース.go は一個だけにして
+go test -v
+
+
+test01_test.go     サンプルで学ぶ Go 言語：Testing
+
+test02_test.go     fortytw2/leaktest     https://github.com/fortytw2/leaktest
+                   leaktest - Goroutine Leak Detector   https://www.wenyanet.com/opensource/ja/606409dc1a825c628d2a40aa.html
+
