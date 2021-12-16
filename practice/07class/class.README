@@ -1,0 +1,62 @@
+クラス実験　継承が可能か
+
+参考サイト
+https://www.kwbtblog.com/entry/2020/04/07/055735
+
+新しいことにはウェルカム
+Go言語でハマったことメモ（クラス・継承）
+
+
+継承 Is-A 形
+class01.go   
+type Person struct {
+	name string
+	Human
+}
+
+
+継承 Has-a 形
+class01-2.go 
+type Person struct {
+	name string
+	hu Human
+}
+
+オプジェクト作成関数　一挙に作る
+class02.go   
+func newPerson() Person {
+	var ps Person = Person{ "noname", Human{ "calm", Object{"Person"}}}
+	return ps
+}
+
+
+
+オプジェクト作成関数 superにも作成関数を使う
+class02-2.go 
+func newPerson() Person {
+	//var ps Person = Person{ "noname", newHuman() }
+	var ps Person // = Person{}
+	ps.name = "Anon"
+	ps.Human = newHuman()
+	ps.classname = "Person"
+	return ps
+}
+
+
+
+他に関数も作ってみる
+class03.go   
+
+
+
+
+personsパッケージを作ってみる
+class04.go
+import (
+	"fmt"
+	"practice/07class/persons"
+)
+
+
+class03.goのクラスをパッケージ化
+persons/persons.go
