@@ -1,0 +1,19 @@
+
+https://medium.com/since-i-want-to-start-blog-that-looks-like-men-do/%E5%88%9D%E5%BF%83%E8%80%85%E3%81%AB%E9%80%81%E3%82%8A%E3%81%9F%E3%81%84interface%E3%81%AE%E4%BD%BF%E3%81%84%E6%96%B9-golang-48eba361c3b4
+
+初心者に送りたいinterfaceの使い方[Golang]
+
+1. 何でもはいる型としてのinterface
+inter01.go   
+
+
+全く違う型にキャストして表示したりは出来ないらしい
+inter01-2.go 
+
+
+参考　　01practice copy
+practice15.go
+practice17.go
+
+参考   09json copy
+json01.go    
