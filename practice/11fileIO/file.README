@@ -1,0 +1,52 @@
+サンプルで学ぶ Go 言語    https://www.spinute.org/go-by-example/
+
+
+file01.go    Reading Files
+file02.go    Writing Files
+file03.go    Line Filters
+file04.go    File Paths
+file05.go    Directories
+file05/file05-2.go    ls付き　Directories
+file06.go    Temporary Files and Directories
+file06-2.go  ls付き Temporary Files and Directories
+
+
+
+
+
+
+https://qiita.com/qt-luigi/items/2c13ad68e7d9f8f8c0f2
+Qiita  @qt-luigi
+Goでテキストファイルを読み書きする時に使う標準パッケージ
+
+
+
+
+practice19.go              fileI/O bufio.NewReader.ReadString('\n')                                                                
+practice19-0.go    	   fileI/O ioutil.ReadFile                                                                                 
+practice19-1.go    	   fileI/O bufio.NewReader.ReadString('\n')                                                                
+practice19-2.go    	   fileI/O bufio.NewReader.ReadLine()                                                                      
+practice19-3.go    	   fileI/O bufio.NewScanner.Scan()/Text()                                                                 
+practice19-4.go    	   fileI/O file.Read(slice)                                                                               
+practice19-class.go	   fileI/O class: bufio.NewReader.ReadString('\n')                                                          
+			                                                                                                           
+practice20-0.go    	   fileI/O ioutil.ReadFile ioutil.WriteFile:  Ifile == Ofile. complete.                                    
+practice20-1.go    	   fileI/O bufio.NewReader.ReadString('\n'): May disapper last line without LF.                            
+practice20-2.go    	   fileI/O bufio.NewReader.ReadLine: DOS->unix, keep last line without LF(add LF)                          
+			                                                                                                           
+practice20-3.go    	   fileI/O bufio.NewScanner.Scan/Text Fpritln: DOS->unix, keep last line without LF(add LF)                
+practice20-3-1.go  	   fileI/O bufio.NewScanner.Scan/Text writer.WriteString: DOS->unix, keep last line without LF(add LF)     
+practice20-3-2.go  	   fileI/O bufio.NewScanner.Scan/Bytes write.Write/WriteByte: DOS->unix, keep last line without LF(add LF) 
+			                                                                                                           
+practice20-4.go    	   fileI/O file.Read(b) file.Write(b[:c]):  Ifile == Ofile. complete.                                      
+practice20-5.go		   fileI/O file.Read(b) file.WriteString(string(b[:c])):  Ifile == Ofile. complete.                        
+
+
+practice20用データ
+dat/dos.txt        cr/lf
+    mac.txt        cr
+    unix.txt       lf
+
+    combo.txt      三種の改行記号の混じったデータ
+    combo-*.txt    I/O方法によって違う出力になる
+    
