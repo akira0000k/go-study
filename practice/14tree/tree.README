@@ -1,0 +1,42 @@
+A Tour of Go     https://tour.golang.org/list
+
+Exercise: Equivalent Binary Trees    https://tour.golang.org/concurrency/8
+
+
+1. Implement the Walk function.
+
+2. Test the Walk function.
+
+The function tree.New(k) constructs a randomly-structured (but always sorted) binary tree holding the values k, 2k, 3k, ..., 10k.
+
+Create a new channel ch and kick off the walker:
+
+go Walk(tree.New(1), ch)
+
+Then read and print 10 values from the channel. It should be the numbers 1, 2, 3, ..., 10.
+
+3. Implement the Same function using Walk to determine whether t1 and t2 store the same values.
+
+4. Test the Same function.
+
+Same(tree.New(1), tree.New(1)) should return true, and Same(tree.New(1), tree.New(2)) should return false.
+
+The documentation for Tree can be found here.
+
+https://pkg.go.dev/golang.org/x/tour/tree#Tree
+
+
+tree00.go       study Tree struct.
+tree01.go       Test Walk Function.
+tree02.go       Test Same Function.
+tree03.go       length differ cause deadlock
+tree04.go       avoid deadlock when no buffer.
+tree05.go       complete addTree function(**).
+tree06.go       complete addTree function(return).
+tree07.go       making random tree
+tree08.go       making sorted tree
+tree09.go       deleting slice element(no.2)
+tree10.go       check create and compare time
+tree11.go       stop compare flag
+tree12.go       use context
+tree13.go       cancel in main
