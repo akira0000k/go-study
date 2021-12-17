@@ -1,0 +1,52 @@
+
+
+https://learnxinyminutes.com/docs/go/
+
+
+Learn X in Y minutes
+Where X=Go
+
+Get the code: learngo.go
+
+Go was created out of the need to get work done. It’s not the latest trend in programming language theory, but it is a way to solve real-world problems.
+
+It draws concepts from imperative languages with static typing. It’s fast to compile and fast to execute, it adds easy-to-understand concurrency because multi-core CPUs are now common, and it’s used successfully in large codebases (~100 million loc at Google, Inc.).
+
+Go comes with a good standard library and a sizeable community.
+
+
+
+   code learn01.go
+
+
+
+Further Reading
+
+The root of all things Go is the official Go web site. There you can follow the tutorial, play interactively, and read lots. Aside from a tour, the docs contain information on how to write clean and effective Go code, package and command docs, and release history.
+
+The Go language specification itself is highly recommended. It’s easy to read and amazingly short (as language definitions go these days.)
+
+You can play around with the code on Go playground. Try to change it and run it from your browser! Note that you can use https://play.golang.org as a REPL to test things and code in your browser, without even installing Go.
+
+On the reading list for students of Go is the source code to the standard library. Comprehensively documented, it demonstrates the best of readable and understandable Go, Go style, and Go idioms. Or you can click on a function name in the documentation and the source code comes up!
+
+Another great resource to learn Go is Go by example.
+
+There are many excellent conference talks and video tutorials on Go available on YouTube, and here are three playlists of the very best, tailored for beginners, intermediate, and advanced Gophers respectively: * Golang University 101 introduces fundamental Go concepts and shows you how to use the Go tools to create and manage Go code * Golang University 201 steps it up a notch, explaining important techniques like testing, web services, and APIs * Golang University 301 dives into more advanced topics like the Go scheduler, implementation of maps and channels, and optimisation techniques
+
+Go Mobile adds support for mobile platforms (Android and iOS). You can write all-Go native mobile apps or write a library that contains bindings from a Go package, which can be invoked via Java (Android) and Objective-C (iOS). Check out the Go Mobile page for more information.
+
+Got a suggestion? A correction, perhaps? Open an Issue on the Github Repo, or make a pull request yourself!
+
+Originally contributed by Sonia Keys, and updated by 42 contributor(s).
+Creative Commons License
+
+© 2021 Sonia Keys, Christopher Bess, Jesse Johnson, Quint Guvernator, Jose Donizetti, Alexej Friesen, Clayton Walker, Leonid Shevtsov, Michael Graf, John Arundel
+
+
+
+
+learn01.go   original learngo.go
+learn02.go   +section
+learn03.go   Variadic Parameter test
+learn04.go   Web Programming only
