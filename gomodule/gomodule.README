@@ -1,0 +1,15 @@
+GOMODULE--Goのパッケージ管理
+
+https://qiita.com/Syoitu/items/f221b52231703cebe8ff
+
+GOMODULE goモジュール
+
+Go1.11バージョン以降追加された機能です。またバージョン上げてない方はバージョンアップしてください
+
+
+
+GO go
+Modules, module versions, and more
+
+https://pkg.go.dev/cmd/go#hdr-Modules__module_versions__and_more
+

@@ -1,0 +1,76 @@
+
+Akira@MBP src % ls
+total 48
+drwxr-xr-x  10 Akira  staff    320 11 13 17:35 ./
+drwxr-xr-x   6 Akira  staff    192 11 11 20:48 ../
+-rw-r--r--@  1 Akira  staff   6148 10 30 18:27 .DS_Store
+drwxr-xr-x   4 Akira  staff    128 11 11 21:06 github.com/
+drwxr-xr-x   7 Akira  staff    224 11 13 17:55 gomodule/
+drwxr-xr-x   4 Akira  staff    128 11 11 21:12 hello/
+drwxr-xr-x   3 Akira  staff     96 10  1 20:01 leaktest--/
+drwxr-xr-x  24 Akira  staff    768 11 13 16:41 practice/
+drwxr-xr-x   4 Akira  staff    128 11 12 18:25 sample/
+-rw-r--r--   1 Akira  staff  13058 11  4 19:34 skeleton.tgz
+Akira@MBP src % cd gomodule/
+Akira@MBP gomodule % ls
+total 40
+drwxr-xr-x   7 Akira  staff   224 11 13 17:55 ./
+drwxr-xr-x  10 Akira  staff   320 11 13 17:35 ../
+-rw-r--r--   1 Akira  staff  5247 11 13 17:55 01err.log
+-rw-r--r--   1 Akira  staff  1050 11 13 17:36 go-env.log
+-rw-r--r--   1 Akira  staff  1050 11 13 17:35 go-env.log~
+drwxr-xr-x   5 Akira  staff   160 11 13 17:51 gomodtest/
+-rw-r--r--   1 Akira  staff    92 11 13 17:39 gomodule.README
+Akira@MBP gomodule % cd gomodtest/
+Akira@MBP gomodtest % ls
+total 16
+drwxr-xr-x  5 Akira  staff  160 11 13 17:51 ./
+drwxr-xr-x  7 Akira  staff  224 11 13 17:55 ../
+-rw-r--r--  1 Akira  staff   26 11 13 17:49 go.mod
+-rw-r--r--  1 Akira  staff    0 11 13 17:49 go.sum
+-rw-r--r--  1 Akira  staff  119 11 13 17:51 main.go
+Akira@MBP gomodtest % cat go.mod
+module gomodtest
+
+go 1.16
+Akira@MBP gomodtest % go mod init gomodtest
+go: /Users/Akira/go/src/gomodule/gomodtest/go.mod already exists
+Akira@MBP gomodtest % cat go.mod
+module gomodtest
+
+go 1.16
+Akira@MBP gomodtest % go get -u go.uber.org/zap
+go get: added go.uber.org/atomic v1.9.0
+go get: added go.uber.org/multierr v1.7.0
+go get: added go.uber.org/zap v1.19.1
+Akira@MBP gomodtest % cat go.mod
+module gomodtest
+
+go 1.16
+
+require (
+	go.uber.org/atomic v1.9.0 // indirect
+	go.uber.org/multierr v1.7.0 // indirect
+	go.uber.org/zap v1.19.1 // indirect
+)
+Akira@MBP gomodtest % ls
+total 32
+drwxr-xr-x  5 Akira  staff   160 11 13 17:51 ./
+drwxr-xr-x  7 Akira  staff   224 11 13 17:55 ../
+-rw-r--r--  1 Akira  staff   156 11 13 17:57 go.mod
+-rw-r--r--  1 Akira  staff  4888 11 13 17:57 go.sum
+-rw-r--r--  1 Akira  staff   119 11 13 17:51 main.go
+Akira@MBP gomodtest % go run main.go
+{"level":"warn","ts":1636793901.03931,"caller":"gomodtest/main.go:7","msg":"warning test"}
+Akira@MBP gomodtest % go build
+Akira@MBP gomodtest % ls
+total 8552
+drwxr-xr-x  6 Akira  staff      192 11 13 17:58 ./
+drwxr-xr-x  7 Akira  staff      224 11 13 17:55 ../
+-rw-r--r--  1 Akira  staff      156 11 13 17:57 go.mod
+-rw-r--r--  1 Akira  staff     4888 11 13 17:57 go.sum
+-rwxr-xr-x  1 Akira  staff  4359616 11 13 17:58 gomodtest*
+-rw-r--r--  1 Akira  staff      119 11 13 17:51 main.go
+Akira@MBP gomodtest % ./gomodtest 
+{"level":"warn","ts":1636793936.033918,"caller":"gomodtest/main.go:7","msg":"warning test"}
+Akira@MBP gomodtest % 
