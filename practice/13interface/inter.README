@@ -7,10 +7,26 @@ https://medium.com/since-i-want-to-start-blog-that-looks-like-men-do/%E5%88%9D%E
 inter01.go   
 
 
-全く違う型にキャストして表示したりは出来ないらしい
+2. 全く違う型にキャストして表示したりは出来ないらしい
 inter01-2.go 
 
 
+https://otiai10.hatenablog.com/entry/2014/05/27/223556
+Go言語でinterfaceをimpleしてるつもりが「does not implement (method has pointer receiver)」って叱られる
+
+3. func (t*type) xx() 参照にしたときは 構造体のアドレスを入れる。
+inter02/main.go
+
+
+Go言語のInterfaceの考え方、Accept interfaces,return structs
+https://qiita.com/weloan/items/de3b1bcabd329ec61709
+
+4. 同じクラスをいくつものインターフェースに属させて良い。
+inter03.go
+
+
+
+その他
 参考　　01practice copy
 practice15.go
 practice17.go
