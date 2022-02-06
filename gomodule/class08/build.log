@@ -1,0 +1,68 @@
+|
+Akira@MBP class08 % ls
+total 8
+drwxr-xr-x   5 Akira  staff   160  2  6 17:40 ./
+drwxr-xr-x  12 Akira  staff   384  2  6 17:38 ../
+drwxr-xr-x   3 Akira  staff    96  2  4 16:45 main/
+-rw-r--r--   1 Akira  staff  2379  2  4 18:12 module-path.README
+drwxr-xr-x   3 Akira  staff    96  2  4 16:00 persons/
+|
+Akira@MBP class08 % go mod init go.mod
+go: creating new go.mod: module go.mod
+go: to add module requirements and sums:
+	go mod tidy
+|
+Akira@MBP class08 % cat go.mod
+module go.mod
+
+go 1.16
+|
+|
+|
+Akira@MBP class08 % go build main/root/clas-test.go
+|
+Akira@MBP class08 % ls
+total 4000
+drwxr-xr-x   7 Akira  staff      224  2  6 17:41 ./
+drwxr-xr-x  12 Akira  staff      384  2  6 17:38 ../
+-rwxr-xr-x   1 Akira  staff  2036304  2  6 17:41 clas-test*
+-rw-r--r--   1 Akira  staff       23  2  6 17:40 go.mod
+drwxr-xr-x   3 Akira  staff       96  2  4 16:45 main/
+-rw-r--r--   1 Akira  staff     2379  2  4 18:12 module-path.README
+drwxr-xr-x   3 Akira  staff       96  2  4 16:00 persons/
+|
+Akira@MBP class08 % head main/root/clas-test.go
+package main
+
+import (
+	"fmt"
+	"go.mod/persons"
+)
+
+func main() {
+	fmt.Println("main start")
+
+|
+Akira@MBP class08 % ls persons
+total 8
+drwxr-xr-x  3 Akira  staff    96  2  4 16:00 ./
+drwxr-xr-x  7 Akira  staff   224  2  6 17:41 ../
+-rw-r--r--  1 Akira  staff  1240  2  2 22:12 persons.go
+|
+Akira@MBP class08 % ./clas-test 
+main start
+{Anon {easy {Person}}}
+nandayou
+{akira {angry {Retired}}}
+{hana {sleepy {OnotherWorld}}}
+angry
+Retired
+sleepy
+OnotherWorld
+{akirahana {angrysleepy {Retired}}}
+&{akirahana {angrysleepy {Retired}}}
+{akirahana {angrysleepy {Retired}}}
+akirahana angrysleepy Retired
+main end
+|
+Akira@MBP class08 % 

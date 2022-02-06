@@ -1,0 +1,60 @@
+https://zenn.dev/lunarxlark/articles/go-module-jpn
+自分用日本語訳 Go Module
+
+
+go.mod
+
+moduleはGoソースのルートディレクトリにあるgo.modファイルとGoソースのツリー構成によって決められます。
+moduleのソースコードはGOPATHの外に配置されているかもしれません。go.modは4つのディレクティブmodule, require, replace, excludeから構成されます。
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+(~/go/src/の下でなくても構わない)
+
+
+モジュールgithub.com/my/thingに対するgo.modの例を挙げます。
+
+       ...................module path
+module github.com/my/thing
+
+require (
+    github.com/some/dependency v1.2.3
+    github.com/another/dependency/v4 v4.0.0
+)
+
+モジュールはgo.modのmoduleディレクティブでmodule pathを用いて自身を宣言します。
+module内の全パッケージのimport pathは共通のプレフィックスとしてmodule pathを共有します。
+moduleパスとパッケージディレクトリまでのgo.modからの相対パスはpackageのimportパスを決定します。
+
+       　　 moduleパス       go.modからの相対パス
+       ................... .......
+import github.com/my/thing/foo/bar
+
+myroot/go.mod
+      /foo/bar/imported.go
+
+
+
+https://github.com/golang/go/wiki/Modules
+
+golang/go
+Modules
+Go Modules
+go.mod
+
+A module is defined by a tree of Go source files with a go.mod file in the tree's root directory. Module source code may be located outside of GOPATH. There are four directives: module, require, replace, exclude.
+
+A module declares its identity in its go.mod via the module directive, which provides the module path. The import paths for all packages in a module share the module path as a common prefix. The module path and the relative path from the go.mod to a package's directory together determine a package's import path.
+
+For example, if you are creating a module for a repository github.com/user/mymod that will contain two packages with import paths github.com/user/mymod/foo and github.com/user/mymod/bar, then the first line in your go.mod file typically would declare your module path as module github.com/user/mymod, and the corresponding on-disk structure could be:
+
+
+module mymod
+import "mymod/foo"
+import "mymod/bar"
+
+mymod
+|-- bar
+|   `-- bar.go
+|-- foo
+|   `-- foo.go
+`-- go.mod
